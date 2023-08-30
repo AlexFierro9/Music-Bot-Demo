@@ -9,7 +9,7 @@ sentiment_model = AutoModelForSeq2SeqLM.from_pretrained("mrm8488/t5-base-finetun
 tokenizer = AutoTokenizer.from_pretrained("microsoft/GODEL-v1_1-large-seq2seq")
 model = AutoModelForSeq2SeqLM.from_pretrained("microsoft/GODEL-v1_1-large-seq2seq")
 
-api_key = str(input("Please provide your api key"))
+api_key = "ebc1d6e9d3c505c0f891276eca78dba7"
 
 def generate_response(dialog):
     knowledge = ''
