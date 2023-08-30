@@ -1,6 +1,6 @@
 # Emotion-based Chatbot with Music Recommendation
 
-This project is a chatbot that can analyze user sentiments and generate responses based on the emotion detected. It also uses the Last.fm API to get the top songs according to the mood of the user and display them along with the conversation.
+This project is a chatbot that can sense user emotions and generate responses that are aligned with the user's mood. It also uses the Last.fm API to suggest songs that match the user's feelings and display them along with the chat history. This project is built on a HuggingFace Transformers backend that performs the emotion recognition and dialogue generation, and a simple and lightweight js frontend that shows the chat interface and the music player. This project is designed to run on low power devices, as the backend server does most of the computation. This project is inspired by [this project by Sagar Sehgal](https://github.com/thesagarsehgal/Chatbot_Song_Recommender), which uses a similar approach.  
 
 ## How it works
 
