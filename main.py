@@ -9,6 +9,7 @@ sentiment_model = AutoModelForSeq2SeqLM.from_pretrained("mrm8488/t5-base-finetun
 tokenizer = AutoTokenizer.from_pretrained("microsoft/GODEL-v1_1-large-seq2seq")
 model = AutoModelForSeq2SeqLM.from_pretrained("microsoft/GODEL-v1_1-large-seq2seq")
 
+api_key = str(input("Please provide your api key"))
 
 def generate_response(dialog):
     knowledge = ''
@@ -26,8 +27,7 @@ def sentiment_finder(user_dialog):
     input_ids = sentiment_tokenizer.encode(user_dialog + '</s>', return_tensors='pt')
     output = sentiment_model.generate(input_ids=input_ids, max_length=2)
     emotion = [sentiment_tokenizer.decode(ids) for ids in output][0]
-    return emotion
-
+    return emotion[6:]
 
 app = Flask(__name__)
 api = Api(app)
@@ -41,7 +41,7 @@ class ResponseResource(Resource):
         generated_text = generate_response(dialog)
         user_dialog = dialog[-1]
         emotion = sentiment_finder(user_dialog)
-        response_data = {'generated_response': generated_text, 'emotion': emotion}
+        response_data = {'generated_response': generated_text, 'emotion': emotion,'api_key':api_key}
         return jsonify(response_data)
 
 
