@@ -46,9 +46,7 @@ async function handleUserInput() {
     }
 }
 
-// ... Rest of the code ...
 
-// ... Existing code ...
 
 function displayRecommendations(recommendations) {
     const recommendationsContainer = document.createElement("div");
@@ -94,10 +92,7 @@ function displayRecommendations(recommendations) {
     document.querySelector(".chat-container").appendChild(recommendationsContainer);
 }
 
-// ... Rest of the code ...
 
-
-// ... Rest of the code ...
 
 
 
