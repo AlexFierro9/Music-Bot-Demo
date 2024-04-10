@@ -67,7 +67,7 @@ function displayRecommendations(recommendations) {
     document.querySelector(".recommendations-container").innerHTML = "";
     document.querySelector(".input-container").appendChild(recommendationsContainer);
 }
-// ... Existing code ...
+
 
 function displayRecommendations(recommendations) {
     const recommendationsContainer = document.createElement("div");
